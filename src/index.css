@@ -1,4 +1,6 @@
-button {
+#button {
+  height: 20px;
+  width: 60px;
   margin: 10px;
 }
 

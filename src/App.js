@@ -1,21 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Header from './Header'
-import Button from './Button'
+import Form from './Form';
+import Output from './Output'
 
 function App() {
-  const handleSubmit = () => {
-    console.log('Submitted')
-  }
+  const [todos, setTodos] = useState([])
 
-  const handleDelete = () => {
-    console.log('Deleted')
+  const addTodo = (todo) => {
+    setTodos([...todos, todo]);
   }
+    console.log(todos);
 
   return (
     <div className="App">
       <Header title="Today's To Dos"/>
-      <Button value='Submit' onClick={handleSubmit} />
-      <Button value='Delete' onClick={handleDelete} />
+      <br></br>
+      <Form addTodo={addTodo}/>
+      <Output array={todos}/>
     </div>
   );
 }
