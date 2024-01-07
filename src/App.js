@@ -9,14 +9,20 @@ function App() {
   const addTodo = (todo) => {
     setTodos([...todos, todo]);
   }
+
+  const deleteTodo = (id) => {
+    console.log(id);
     console.log(todos);
+    setTodos(todos.filter(item => item !== id.task))
+  }
 
   return (
     <div className="App">
       <Header title="Today's To Dos"/>
       <br></br>
       <Form addTodo={addTodo}/>
-      <Output array={todos}/>
+      {todos.map(todo => <Output task={todo} key={todo} deleteTodo={deleteTodo}/> )}
+      {/* <Output array={todos} deleteTodo={deleteTodo}/> */}
     </div>
   );
 }

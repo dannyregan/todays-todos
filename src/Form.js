@@ -10,9 +10,9 @@ function Form({addTodo}) {
         setValue("");
     }
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='formDiv'>
             <input id='input' type='text' placeholder='What will you do today?' onChange={(e) => setValue(e.target.value)} value={value}/>
-            <button type='submit' id='button'>Submit</button>
+            <button type='submit' className='formButton'>Submit</button>
         </form>
     )
 }
