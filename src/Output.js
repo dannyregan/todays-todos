@@ -7,11 +7,4 @@ export default function Output({task, deleteTodo}) {
             <button onClick={() => deleteTodo({task})} className="outputButton">Delete</button>
         </div>
     )
-    // return (
-    //     <ul>
-    //         {
-    //             array.map(item => <li key={item}>{item}<button id={item} onClick={() => deleteTodo({item})}>Delete</button></li>)
-    //         }
-    //     </ul>
-    // )
 }

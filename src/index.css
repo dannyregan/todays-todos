@@ -1,0 +1,91 @@
+body {
+  background-color: #062f4f;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.app {
+  text-align: center;
+}
+
+.header {
+font-size: 2rem;
+color: white;
+text-align: center;
+text-decoration: underline;
+}
+
+.formDiv {
+  display: flex;
+  justify-content: space-evenly;
+  width: 350px;
+  align-items: center;
+}
+
+.formInput {
+  height: 40px;
+  width: 200px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+/*  background-color: rgba(155, 81, 151, .1); 813772*/
+
+.formInput::placeholder {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+}
+
+.formInput:focus {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  background-color: rgba(155, 81, 151, .4);
+  border-color: #813772;
+}
+
+.formInput:focus::placeholder {
+  color: transparent;
+}
+
+.formButton,
+.outputButton {
+  width: 100px;
+  height: 35px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.formButton:hover {
+  cursor: pointer;
+  background-color: rgba(250, 250, 250, .2);
+}
+
+.outputDiv {
+  background-color: #813772;
+  border: 2px solid white;
+  margin: 1rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+}
+
+.outputButton:hover {
+  cursor: pointer;
+  background-color: rgba(186, 36, 0, .6);
+}
+
+.outputText {
+  margin-right: 10px;
+}

@@ -4,14 +4,18 @@ function Form({addTodo}) {
     const [value, setValue] = useState("")
 
     const handleSubmit = e => {
-        e.preventDefault();
-        addTodo(value);
-
-        setValue("");
+        if (value === '') {
+            e.preventDefault();
+        } else {
+            e.preventDefault();
+            addTodo(value);
+    
+            setValue("");
+        }
     }
     return (
         <form onSubmit={handleSubmit} className='formDiv'>
-            <input id='input' type='text' placeholder='What will you do today?' onChange={(e) => setValue(e.target.value)} value={value}/>
+            <input id='input' className='formInput' type='text' placeholder='What will you do today?' onChange={(e) => setValue(e.target.value)} value={value}/>
             <button type='submit' className='formButton'>Submit</button>
         </form>
     )
