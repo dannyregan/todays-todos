@@ -15,7 +15,7 @@ function Form({addTodo}) {
     }
     return (
         <form onSubmit={handleSubmit} className='formDiv'>
-            <input id='input' className='formInput' type='text' placeholder='What will you do today?' onChange={(e) => setValue(e.target.value)} value={value}/>
+            <input id='input' className='formInput' type='text' placeholder='What will you do today?' onChange={(e) => setValue(e.target.value)} value={value} autoComplete="off"/>
             <button type='submit' className='formButton'>Submit</button>
         </form>
     )
